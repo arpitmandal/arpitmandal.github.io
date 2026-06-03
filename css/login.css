@@ -1,0 +1,196 @@
+/* ═══════════════════════════════════════════════
+   LOGIN SCREEN — Windows XP Welcome Screen
+═══════════════════════════════════════════════ */
+
+#login-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #1A3578 0%, #0E1F50 100%);
+    font-family: Tahoma, 'MS Sans Serif', Arial, sans-serif;
+    transition: opacity 0.55s ease;
+}
+
+/* ── Header ── */
+.login-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 40px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    flex-shrink: 0;
+}
+
+.login-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 22px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.login-logo em {
+    color: #78C0FF;
+    font-style: italic;
+}
+
+.login-divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.05) 100%);
+}
+
+.login-subtitle {
+    color: rgba(255,255,255,0.78);
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* ── Users Area ── */
+.login-users {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-user {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: background 0.2s, border-color 0.2s;
+    min-width: 320px;
+    outline: none;
+}
+
+.login-user:hover,
+.login-user:focus {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(120,192,255,0.6);
+}
+
+.user-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 3px solid rgba(255,255,255,0.85);
+    flex-shrink: 0;
+    background: #4A9BE8;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-name {
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.55);
+    margin-bottom: 4px;
+}
+
+.user-subtitle {
+    display: block;
+    color: rgba(255,255,255,0.75);
+    font-size: 12px;
+}
+
+.user-arrow {
+    color: rgba(120,192,255,0.9);
+    font-size: 22px;
+    transition: transform 0.2s;
+}
+
+.login-user:hover .user-arrow { transform: translateX(4px); }
+
+/* ── Footer ── */
+.login-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.25);
+    flex-shrink: 0;
+}
+
+.login-footer-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.75);
+    font-size: 12px;
+}
+
+.login-footer-left em { color: #78C0FF; font-style: italic; }
+
+.login-footer-right {
+    color: rgba(255,255,255,0.55);
+    font-size: 11px;
+}
+
+/* ── Shutdown Screen ── */
+#shutdown-screen {
+    position: fixed;
+    inset: 0;
+    background: #003878;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.shutdown-content {
+    text-align: center;
+    color: white;
+}
+
+.shutdown-title {
+    font-size: 28px;
+    font-weight: normal;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.shutdown-title em { color: #78C0FF; font-style: italic; }
+
+.shutdown-content p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 28px;
+}
+
+.shutdown-return-btn {
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 4px;
+    padding: 8px 22px;
+    color: white;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.shutdown-return-btn:hover { background: rgba(255,255,255,0.28); }
